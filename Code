@@ -1,1 +1,44 @@
+import sys
+import time
 
+def jalanin_lirik():
+    lirik = [
+        ("\nRupiah turun ", 0.08, 0.6),
+        ("Presiden engga ", 0.08, 0.8),
+        ("Wakacau ", 0.1, 0.1),
+        ("Wakacau ", 0.1, 0.1),
+        ("Wakacau cau cau ", 0.09, 0.1),
+        ("Negara gelap ", 0.12, 0.4),
+        ("Korup semua ", 0.12, 0.4),
+        ("Boros APBN nya ", 0.18, 0.8),
+        ("Makanan gratis ", 0.1, 0.2),
+        ("Kok malah kritis ", 0.09, 0.6),
+        ("Wakacau ", 0.1, 0.1),
+        ("Wakacau ", 0.1, 0.1),
+        ("Wakacau cau cau ", 0.09, 0.1),
+        ("Anggaran bengkak ", 0.1, 0.1),
+        ("Proyeknya mangkrak ", 0.1, 0.1),
+        ("Kopdesnya dimana mana ", 0.12, 0.8),
+
+
+           
+    ]
+
+    print("\n== Wakacau - Bella Ciao Cover by Hamba Sahaya ==")
+    time.sleep(0.1)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
